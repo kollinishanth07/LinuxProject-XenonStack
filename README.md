@@ -38,7 +38,7 @@ Backup system files: sysopctl backup <path>
 Getting Started
 Clone the repository:
 
-git clone https://github.com/yourusername/sysopctl.git
+git clone (https://github.com/kollinishanth07/LinuxProject-XenonStack)
 Navigate to the project directory:
 
 cd sysopctl
