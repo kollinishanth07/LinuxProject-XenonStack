@@ -1,0 +1,47 @@
+//Easy
+List Running Services:
+sysopctl service list() {
+    systemctl list-units --type=service
+}
+View System Load:
+sysopctl system load() {
+    uptime
+}
+
+//Intermediate
+Manage System Services:
+
+sysopctl service start() {
+    systemctl start "$1"
+    echo "Service $1 started."
+}
+
+sysopctl service stop() {
+    systemctl stop "$1"
+    echo "Service $1 stopped."
+}
+
+Check Disk Usage:
+
+sysopctl disk usage() {
+    df -h
+}
+
+//Advance Level
+
+Monitor System Processes:
+
+sysopctl process monitor() {
+    top
+}
+Analyze System Logs:
+
+sysopctl logs analyze() {
+    journalctl -p crit --no-pager
+}
+Backup System Files:
+
+sysopctl backup() {
+    rsync -av --progress "$1" "/backup/path"
+    echo "Backup of $1 completed."
+}
